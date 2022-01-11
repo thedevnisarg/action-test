@@ -1,0 +1,15 @@
+name: Deploy
+
+on: push
+
+jobs:
+  deploy:
+    name: Deploy
+    needs: unit-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a greeting
+        env:
+          MY_VAR: This is deploy job.
+        run: |
+          echo $MY_VAR
