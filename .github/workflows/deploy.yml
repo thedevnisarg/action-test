@@ -9,6 +9,7 @@ on:
 
 jobs:
   dev-test:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     name: My Job
     runs-on: ubuntu-latest
     steps:
