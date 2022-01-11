@@ -1,0 +1,14 @@
+name: Unit Test
+
+on: push
+
+jobs:
+  unit-test:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a greeting
+        env:
+          MY_VAR: This is unit-test job.
+        run: |
+          echo $MY_VAR
