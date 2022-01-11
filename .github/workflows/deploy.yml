@@ -3,13 +3,12 @@ name: Deploy
 on: push
 
 jobs:
-  dev:
-    name: Deploy
-    needs: unit-test
+  dev-test:
+    name: My Job
     runs-on: ubuntu-latest
     steps:
       - name: Print a greeting
         env:
-          MY_VAR: This is deploy job.
+          MY_VAR: This is dev-test job.
         run: |
           echo $MY_VAR
