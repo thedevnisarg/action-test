@@ -3,6 +3,7 @@ name: Deploy
 on:
   workflow_run:
     workflows: ["Unit Test"]
+    branches: [main]
     types:
       - completed
 
