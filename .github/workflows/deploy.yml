@@ -1,6 +1,11 @@
 name: Deploy
 
-on: push
+on: 
+  push:
+  workflow_run:
+    workflows: ["Unit Test"]
+    types:
+      - completed
 
 jobs:
   deploy:
